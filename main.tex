@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+% math packages
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+
+% graphics packages
+\usepackage{graphicx}
+
+% code packages
+\usepackage{listings}
+
+% language packages
+\usepackage[italian]{babel}
+
+% page geometry
+\usepackage[a4paper, portrait, margin=0.85in]{geometry}
+
+% links
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+
+\title{
+	Vehicular communications
+}
+\author{Ollari Ischimji Dmitri}
+
+\maketitle
+
+% Setup hyperref package
+\hypersetup{
+    linkcolor=black,  % Color of internal links
+    filecolor=black,  % Color of file links
+    urlcolor=black,   % Color of URLs
+    citecolor=black   % Color of citations
+}
+
+\newpage
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\include{chapters/01_introduction}
+\include{chapters/02_network_basics}
+\include{chapters/03_intra_vehicle_communications}
+\include{chapters/04_extra_vehicular_communications}
+
+
+\end{document}
