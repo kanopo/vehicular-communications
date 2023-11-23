@@ -1,5 +1,102 @@
 \section{Extra-Vehicle Car-to-X (C2X) Networking}
 
-% ! LEZIONE SALTATA INTERAMENTE (da riprendere)
+\subsection{Introduzione}
+Le comunicazioni Extra-Vehicle Car-to-X (C2X) si articolano in vari schemi:
+\begin{itemize}
+    \item Vehicle-to-X (V2X).
+    \item Inter-Vehicle Communication (IVC).
+    \item Vehicular Ad-hoc NETwork (VANET).
+\end{itemize}
 
+\subsection{Casi d'Uso}
+Le comunicazioni C2X si dividono in categorie di sicurezza e non sicurezza, con esigenze diverse in termini di latenza e affidabilità.
 
+\subsection{Diversità dei Casi d'Uso}
+I casi d'uso C2X variano notevolmente, coprendo applicazioni come:
+\begin{itemize}
+    \item Avvisi di pericolo.
+    \item Servizi basati sulla localizzazione.
+    \item Allarmi su scala urbana.
+    \item Informazioni sul tempo di viaggio.
+    \item Condivisione di file.
+    \item Servizi interattivi.
+\end{itemize}
+
+\subsection{Diversità dei Requisiti}
+Differenti applicazioni richiedono diversi livelli di latenza e affidabilità, come nel caso di sistemi di assistenza all'intersezione o di platooning.
+
+\subsection{Motivazioni}
+L'evoluzione delle comunicazioni C2X è stata guidata da:
+\begin{itemize}
+    \item Idee visionarie negli anni '70.
+    \item Interesse iniziale da parte di governi e industrie.
+    \item Prototipi funzionanti in Giappone, Europa e USA.
+    \item Cambio di paradigma negli anni '80 verso sistemi assistiti dall'infrastruttura.
+    \item Aumento significativo della potenza di calcolo.
+\end{itemize}
+
+\subsection{Interesse Rinnovato}
+Governo e industria hanno mostrato un rinnovato interesse per i sistemi C2X, con vari test operativi sul campo in diversi paesi.
+
+\subsection{Reti Tradizionali vs. MANET vs. VANET}
+I VANET differiscono dalle reti tradizionali e dai MANET per:
+\begin{itemize}
+    \item Topologia dinamica.
+    \item Pattern di comunicazione.
+    \item Infrastrutture diverse.
+\end{itemize}
+
+\subsection{Livelli di Supporto dell'Infrastruttura}
+Le comunicazioni C2X possono avvenire tramite:
+\begin{itemize}
+    \item Comunicazione ad-hoc pura.
+    \item Unità di Supporto Stazionarie (SSU).
+    \item Unità di Bordo Stradali (RSU).
+    \item Centri Informazioni sul Traffico (TIC).
+\end{itemize}
+
+\subsection{Infrastruttura vs. Nessuna Infrastruttura}
+Le reti con infrastruttura offrono coordinamento centrale e gestione delle risorse, ma possono soffrire di alta latenza e carico sulla rete principale. Le reti senza infrastruttura sono sistemi auto-organizzanti con accesso al canale, autenticazione e bassa latenza.
+
+\subsection{Sfide della Comunicazione C2X}
+Le comunicazioni C2X affrontano sfide come:
+\begin{itemize}
+    \item Condizioni del canale altamente variabili.
+    \item Topologia altamente dinamica.
+    \item Privacy e sicurezza.
+\end{itemize}
+
+\subsection{Paradigmi e Media di Comunicazione}
+Tecnologie di comunicazione wireless per C2X includono:
+\begin{itemize}
+    \item Tecnologie basate su infrastruttura (es. GSM, UMTS, LTE/WiMAX).
+    \item Tecnologie senza infrastruttura (es. Bluetooth, ZigBee, Wi-Fi, DSRC/WAVE).
+\end{itemize}
+
+\subsection{Media Broadcast}
+Il Canale dei Messaggi di Traffico (TMC) gestisce informazioni di traffico centralizzate e trasmette su canali FM.
+
+\subsection{Reti Cellulari}
+Le reti cellulari si basano su un concetto di divisione del mondo in celle, ognuna servita da una stazione base, permettendo il riutilizzo delle frequenze.
+
+\subsection{UMTS/LTE vs. IEEE 802.11p}
+Comparazione tra UMTS/LTE e IEEE 802.11p mostra che:
+\begin{itemize}
+    \item UMTS/LTE offre servizi centralizzati e una rapida disseminazione delle informazioni, ma ha latenze elevate a corto raggio e dipende dall'operatore di rete.
+    \item IEEE 802.11p offre latenze minime e può operare senza un operatore di rete, ma necessita di un gateway per servizi centralizzati.
+\end{itemize}
+
+\subsection{Standard per Strati Superiori: CALM e IEEE 802.11p}
+\begin{itemize}
+    \item CALM supporta comunicazioni multimediali e integra vari standard di comunicazione.
+    \item IEEE 1609.* offre standard per sicurezza, servizi di rete e gestione dei canali in ambienti C2X.
+\end{itemize}
+
+\subsection{Gestione del Canale in IEEE 802.11p}
+IEEE 802.11p include funzioni per la gestione del canale, la sincronizzazione e la trasmissione di pacchetti, adattandosi alle esigenze delle comunicazioni C2X.
+
+\subsection{Annunci del Servizio WAVE (WSA)}
+I WSA in IEEE 802.11p identificano BSS WAVE sui Canali di Servizio (SCH) e possono essere trasmessi in qualsiasi momento da qualsiasi nodo.
+
+\subsection{Tecnologia di Comunicazione in IEEE 802.11p}
+IEEE 802.11p affronta sfide come la gestione del backoff e l'accesso prioritario al canale, con un focus su QoS e la gestione di diversi scenari di comunicazione.

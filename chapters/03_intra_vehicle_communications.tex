@@ -1,1 +1,107 @@
 \section{Intra-vehicle Communications}
+
+\subsection{Panoramica}
+Le comunicazioni intra-veicolari si concentrano su diversi elementi chiave:
+\begin{itemize}
+    \item Sistemi bus: fondamenti.
+    \item Protocolli come K-Line, CAN, LIN, FlexRay, MOST e Ethernet in auto.
+    \item Unità di Controllo Elettronico (ECU).
+    \item Aspetti di sicurezza.
+\end{itemize}
+
+\subsection{Strati ISO/OSI}
+L'architettura di comunicazione segue il modello a strati ISO/OSI, dove:
+\begin{itemize}
+    \item Ogni strato ha una funzione e un protocollo specifici.
+    \item Gli strati interagiscono solo con quello immediatamente inferiore.
+    \item Le interfacce seguono specifiche rigorose, spesso stabilite da enti di standardizzazione.
+\end{itemize}
+
+\subsection{Perché i Sistemi Bus?}
+I sistemi bus sono preferiti per vari motivi:
+\begin{itemize}
+    \item Riduzione dei costi, del peso e del volume.
+    \item Maggiore modularità e personalizzabilità dei veicoli.
+    \item Cicli di sviluppo più brevi e maggiore riutilizzo dei componenti.
+\end{itemize}
+
+\subsection{Storia}
+L'evoluzione storica comprende:
+\begin{itemize}
+    \item Uso dei primi microprocessori nei veicoli negli anni '80.
+    \item Sviluppo del K-Line e del CAN.
+    \item Introduzione dei bus di dati per la comunicazione intra-veicolare.
+    \item Standardizzazione e uso in modelli di serie dal 1991.
+\end{itemize}
+
+\subsection{Casi d'Uso}
+I sistemi bus come K-Line e CAN sono usati per:
+\begin{itemize}
+    \item Diagnosi a bordo (OBD).
+    \item Controllo di motore e trasmissione.
+    \item Sicurezza attiva e passiva, comfort e sistemi multimediali.
+\end{itemize}
+
+\subsection{Classificazione: Comunicazione a Bordo}
+La comunicazione a bordo gestisce:
+\begin{itemize}
+    \item Attività complesse di controllo e monitoraggio.
+    \item Trasmissioni di dati tra ECU e interfacce uomo-macchina (MMI).
+    \item Sistemi bus multimediali per trasmissione di grandi volumi di dati.
+\end{itemize}
+
+\subsection{Classificazione: Comunicazione Fuori Bordo}
+La comunicazione fuori bordo include:
+\begin{itemize}
+    \item Diagnosi e test delle emissioni di scarico.
+    \item Installazione iniziale del firmware sugli ECU.
+    \item Debugging durante lo sviluppo.
+\end{itemize}
+
+\subsection{Classificazione secondo il Caso d'Uso}
+Diversi casi d'uso richiedono specifiche esigenze in termini di lunghezza del messaggio, frequenza, velocità dei dati e latenza.
+
+\subsection{Topologie di Rete}
+Le topologie di rete includono configurazioni lineari, stellari e ad anello, con considerazioni su costi, complessità e robustezza.
+
+\subsection{Mezzi e Trasmissione Dati}
+I mezzi di trasmissione dati includono:
+\begin{itemize}
+    \item Opzioni ottiche, elettriche e wireless.
+    \item Modalità unicast, broadcast e multicast.
+\end{itemize}
+
+\subsection{Effetti delle Onde e Topologie di Rete}
+Gli effetti delle onde sono significativi ad alti tassi di trasmissione dei dati, richiedendo contromisure come tappi terminatori e la minimizzazione dell'uso di connettori.
+
+\subsection{Codifica dei Bit}
+La codifica dei bit utilizza schemi come Non Return to Zero (NRZ) e Manchester per gestire la trasmissione dei dati.
+
+\subsection{Riduzione dell'Interferenza Elettromagnetica (EMI)}
+Per ridurre l'EMI, si possono adottare strategie come l'aggiunta di schermature ai cavi e l'uso di cablaggi a coppia intrecciata.
+
+\subsection{Drift dell'Orologio}
+Il drift dell'orologio, causato da variazioni dell'ambiente del quarzo, richiede un continuo aggiustamento della temporizzazione dei bit.
+
+\subsection{Bit Stuffing}
+Il bit stuffing è una soluzione al problema di trasmettere molti bit identici, che potrebbe lasciare senza bordi di segnale utilizzabili per compensare il drift dell'orologio.
+
+\subsection{Classificazione secondo l'Accesso al Bus}
+L'accesso al bus può essere classificato in modi diversi:
+\begin{itemize}
+    \item Accesso deterministico o non deterministico.
+    \item Accesso centralizzato o distribuito.
+    \item Con o senza rischio di collisione.
+\end{itemize}
+
+\subsection{Struttura tipica di un ECU}
+Un ECU tipico è strutturato per strati, includendo il livello fisico, di accesso al bus e applicativo, spesso con un guardiano del bus per spegnimenti di emergenza.
+
+\subsection{Punti Chiave}
+Infine, i punti chiave da ricordare includono:
+\begin{itemize}
+    \item Topologie di rete come singolo filo e doppio filo.
+    \item Differenze tra codifica Non Return to Zero (NRZ) e Manchester.
+    \item Sincronizzazione per il drift dell'orologio e bit stuffing.
+    \item Varie modalità di accesso al bus.
+\end{itemize}
