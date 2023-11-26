@@ -4,14 +4,140 @@ La suddivisione dei casi d'uso della comunicazione tra veicoli e tutto il resto 
 nella seguente maniera:
 
 \begin{itemize}
-    \item \textbf{NON-SAFETY}: comunicazione non legata alla sicurezza
-        \begin{itemize}
-            \item Comfort
-            \item Informazione traffico
-        \end{itemize}
-    \item \textbf{SAFETY}: comunicazione legata alla sicurezza
-        \begin{itemize}
-            \item Situation awareness
-            \item Warning messages
-        \end{itemize}
+	\item \textbf{NON-SAFETY}: comunicazione non legata alla sicurezza
+	      \begin{itemize}
+		      \item Comfort
+		      \item Informazione traffico
+	      \end{itemize}
+	\item \textbf{SAFETY}: comunicazione legata alla sicurezza
+	      \begin{itemize}
+		      \item Situation awareness
+		      \item Warning messages
+	      \end{itemize}
 \end{itemize}
+
+
+
+\subsection{Motivazioni}
+
+\begin{itemize}
+	\item Traditional Network: \textbf{wired, non mobile, static}
+	\item Mobile Ad-Hoc Network:(MANET) \textbf{wireless, mobile, dynamic}
+	\item Vehicular Ad-Hoc Network: (VANET) \textbf{wireless, mobile, dynamic}
+\end{itemize}
+
+Da notare la differenza fra guida in centri urbani e guida su super strada, ci sono pro e contro
+introdotti da ciascuna casistica.
+
+
+\subsection{Livelli di supporto infrastrutturale}
+
+\begin{itemize}
+	\item Pure ad-hoc communication
+	\item Stationary Support Unit (SSU)
+	\item Road Side Unit (RSU)
+	\item Traffic Information Center(TIC)
+\end{itemize}
+
+Si tende a preferire un'approccio eterogeneo per sfruttare i vantaggi di una comunicazione con e
+senza infrastruttura.
+
+\subsection{Le sfide della comunicazione C2X}
+
+
+
+\subsubsection{Comunicazione}
+\begin{itemize}
+	\item Condizioni del canale fortemente variabili.
+	\item Alta congestione, contesa, interferenza.
+	\item Capacità del canale fortemente limitata.
+\end{itemize}
+
+\subsubsection{Networking}
+\begin{itemize}
+	\item Collegamenti unidirezionali.
+	\item Necessità di multi-radio e multi-rete.
+	\item Apparecchiature eterogenee.
+\end{itemize}
+
+\subsubsection{Mobilità}
+\begin{itemize}
+	\item Topologia altamente dinamica.
+	\item Tuttavia, mobilità prevedibile.
+	\item Ambiente eterogeneo.
+\end{itemize}
+
+\subsubsection{Sicurezza}
+\begin{itemize}
+	\item Nessun collegamento affidabile all'infrastruttura centrale.
+	\item Garantire la privacy.
+	\item Base di utenti eterogenea.
+\end{itemize}
+
+
+\section{Paradigmi di comunicazione}
+La comunicazione wireless si divide in due macro categorie: \textbf{basata su infrastruttura} e
+\textbf{non basata su infrastruttura}.
+
+I paradigmi basati sull'utilizzo di una infrastruttura sono:
+\begin{itemize}
+	\item Broadcast
+	\item Cellular
+\end{itemize}
+
+Per quanto riguarda la comunicazione non basata su infrastruttura abbiamo:
+\begin{itemize}
+	\item Short range
+	\item Medium range
+\end{itemize}
+
+
+\subsection{Broadcast media}
+\subsubsection{Traffic Message Channel (TMC)}
+
+Gestione centralizzata delle informazioni del traffico, le informazioni provengono da vari canali
+federali Americani.
+
+Le informazioni sono codificate per avere un significato basato sulla posizione geografica, si
+compongono tabelle regionali che rappresentano il codice dell'evento e il suo significato.
+
+
+\subsubsection{Transport Protocol Experts Group (TPEG)}
+
+Successore pianificato di TMC, fondato sui seguenti principi:
+\begin{itemize}
+	\item Espandibilità
+	\item Indipendeza dal media di trasmissione
+\end{itemize}
+
+
+Gli obietti di TPEG sono:
+\begin{itemize}
+	\item Costruire il sistema alla base per \textbf{Digital Audio Broadcast (DAB)}
+	\item Modulare
+	\item Broadcast(mono directional) e point-to-point (multi directional)
+	\item integra sicurezza mediante il CRC(Cyclic Redundancy Check)
+\end{itemize}
+
+
+\subsection{Cellular Networks}
+
+Il concetto alla base dell'utilizzo della rete cellualre \`e quello di dividere il mondo in tanti
+esagoni che sono le celle, ogni cella viene servita da una stazione.
+
+
+L'utilizzo delle celle impone una forte gerarchia nella rete, poich\`e dopo le celle si incanalano
+nella backbone del paesino, poi del paese, poi della nazione e cosi via.
+
+\subsubsection{UMTS(3G)}
+
+Perdita di segnale se a 290 $km/h$ si effettua una frenata brusca ma i veri problemi sono legati
+alla latenza e alal capacità della rete.
+
+Ci sono due metodologie della gestione dei canali con UMTS:
+\begin{itemize}
+	\item Shared channel: Random Access Channel (RACH) in uplink e il Forward Access Channel (FACH)
+	      in downlink.
+	\item Dedicated Transport Channel (DCH)
+\end{itemize}
+
