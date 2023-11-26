@@ -1,50 +1,35 @@
-\documentclass[12pt]{article}
+\documentclass[11pt, a4paper]{article}
 
-% math packages
-\usepackage{amsmath, amsthm, amssymb, amsfonts}
-
-% graphics packages
-\usepackage{graphicx}
-
-% code packages
-\usepackage{listings}
-
-% language packages
+\usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
 
-% page geometry
-\usepackage[a4paper, portrait, margin=0.85in]{geometry}
+\usepackage{graphicx}
+\graphicspath{{images/}}
 
-% links
-\usepackage[colorlinks]{hyperref}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\usepackage{fancyhdr}
+% Permette di personalizzare intestazioni e piè di pagina
+\pagestyle{fancy}
+\fancyhead[L]{Vehicular Communications}
+\fancyhead[R]{Ollari Ischimji Dmitri}
+\fancyfoot[C]{\thepage}
+
 
 \begin{document}
+  \title{Vehicular Communications}
+  \author{Ollari Ischimji Dmitri}
+  \date{\today}
+  \maketitle
 
-\title{
-	Vehicular communications
-}
-\author{Ollari Ischimji Dmitri}
+  \newpage
+  \tableofcontents
+  \newpage
 
-\maketitle
-
-% Setup hyperref package
-\hypersetup{
-    linkcolor=black,  % Color of internal links
-    filecolor=black,  % Color of file links
-    urlcolor=black,   % Color of URLs
-    citecolor=black   % Color of citations
-}
-
-\newpage
-
-\tableofcontents
-% \listoffigures
-% \listoftables
-
-\include{chapters/01_introduction}
-\include{chapters/02_network_basics}
-\include{chapters/03_intra_vehicle_communications}
-\include{chapters/04_extra_vehicular_communications}
-
+  \include{./capitoli/04_extra_vehicle_comms.tex}
 
 \end{document}
